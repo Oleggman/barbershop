@@ -6,11 +6,12 @@
   --main-color: #555555;
   --secondary-color: #303030;
   --third-color: #9da4bd;
+  --main-btn-cl: #303030;
 
   --white-color: #ffffff;
   --hover-color: #ff6c00;
   --main-bg-cl: #111319;
-  --sup-color: #ff6c00;
+  --accent-color: #ff6c00;
 }
 
 body {
@@ -21,8 +22,16 @@ body {
   color: var(--main-color);
 }
 
+sup {
+  color: var(--accent-color);
+}
+
 .title {
   font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+.uppertitle {
   color: var(--secondary-color);
 }
 
@@ -32,7 +41,9 @@ body {
 }
 
 .link:hover,
-.link:focus {
+.link:focus,
+.side-nav .link:hover,
+.side-nav .link:focus {
   color: var(--hover-color);
 }
 
@@ -42,12 +53,17 @@ body {
 
 .button {
   font-family: inherit;
-  color: var(--white-color);
+  color: var(--main-btn-cl);
   background-color: transparent;
 }
 
-sup {
-  color: var(--sup-color);
+.light-btn {
+  color: var(--white-color);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--hover-color);
 }
 
 .header,
@@ -56,6 +72,54 @@ sup {
   background-color: var(--main-bg-cl);
 }
 
+.hero,
+.services,
+.contacts,
+.hero .uppertitle,
+.services .uppertitle {
+  color: var(--third-color);
+}
+
+/* Hero */
+
+.side-nav .link {
+  color: var(--secondary-color);
+}
+
+/* Services section */
+
+.services {
+  background-color: var(--main-bg-cl);
+}
+
+/* Benefits */
+
+.cards {
+  color: var(--secondary-color);
+}
+
+/* Our barbers */
+
+.barber {
+  color: var(--secondary-color);
+}
+
+.barber-accent {
+  color: var(--accent-color);
+}
+
+/* Contacts */
+
+.contacts .link {
+  color: var(--third-color);
+}
+
+/* Footer */
+
 .footer-link {
   color: var(--secondary-color);
+}
+
+.copyright {
+  color: var(--third-color);
 }
