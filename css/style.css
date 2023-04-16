@@ -12,6 +12,8 @@
   --hover-color: #ff6c00;
   --main-bg-cl: #111319;
   --accent-color: #ff6c00;
+  --card-bg-color: #f7f7f7;
+  --barbers-bg-cl: #f7f7f7;
 }
 
 body {
@@ -22,16 +24,16 @@ body {
   color: var(--main-color);
 }
 
-sup {
-  color: var(--accent-color);
-}
-
 .title {
   font-family: var(--secondary-font);
   color: var(--secondary-color);
 }
 
 .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
   color: var(--secondary-color);
 }
 
@@ -53,6 +55,12 @@ sup {
 
 .button {
   font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   color: var(--main-btn-cl);
   background-color: transparent;
 }
@@ -80,10 +88,56 @@ sup {
   color: var(--third-color);
 }
 
+.hero .title,
+.services .title,
+.contacts .title {
+  color: var(--white-color);
+}
+
+/* Header */
+
+.header .link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
 /* Hero */
 
+.hero > .title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+
+.side-nav .link,
+.hero .light-btn,
+.footer-link,
+.copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+}
+
 .side-nav .link {
+  letter-spacing: 0.2em;
   color: var(--secondary-color);
+}
+
+.hero .light-btn {
+  letter-spacing: 0.1em;
+}
+
+/* About */
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
 }
 
 /* Services section */
@@ -98,14 +152,51 @@ sup {
   color: var(--secondary-color);
 }
 
+.card {
+  text-align: center;
+  background-color: var(--card-bg-color);
+}
+
+.card-num {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+}
+
+.card sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  color: var(--accent-color);
+}
+
+.card-desc {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+}
+
 /* Our barbers */
+
+.barbers {
+  background-color: var(--barbers-bg-cl);
+}
 
 .barber {
   color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .barber-accent {
   color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
 }
 
 /* Contacts */
