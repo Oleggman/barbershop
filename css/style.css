@@ -17,11 +17,18 @@
 }
 
 body {
+  margin: 0;
+
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--main-color);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
@@ -38,6 +45,7 @@ body {
 }
 
 .link {
+  display: inline-block;
   text-decoration: none;
   color: var(--white-color);
 }
