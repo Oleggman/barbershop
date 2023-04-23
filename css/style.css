@@ -14,6 +14,24 @@
   --accent-color: #ff6c00;
   --card-bg-color: #f7f7f7;
   --barbers-bg-cl: #f7f7f7;
+  /* Others */
+  --indent: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
 }
 
 body {
@@ -62,6 +80,10 @@ body {
 }
 
 .button {
+  padding: 12px 20px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -104,11 +126,40 @@ body {
 
 /* Header */
 
+.header .container {
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.main-logo {
+  margin-right: 124px;
+}
+
+.main-nav {
+  display: flex;
+  margin-right: 254px;
+}
+
+.main-nav .list {
+  display: flex;
+  gap: var(--indent);
+}
+
 .header .link {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+}
+
+.nav-list .link,
+.phone-link {
+  padding: 30px 0;
+}
+
+.phone-link {
+  margin-right: 40px;
 }
 
 /* Hero */
