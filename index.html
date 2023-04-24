@@ -11,6 +11,13 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet" />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -88,8 +95,8 @@
         <div class="container">
           <p class="uppertitle">Spend your time with the best masters</p>
           <h2 class="title">Services and prices</h2>
-          <ul class="list">
-            <li>
+          <ul class="services-list list">
+            <li class="services-box">
               <ul class="list">
                 <li>Men&rsquo;s haircut from 300 uah.</li>
                 <li>Beard trim from 300 uah.</li>
@@ -97,7 +104,7 @@
                 <li>Straight razor shave from 200 uah.</li>
               </ul>
             </li>
-            <li>
+            <li class="services-box">
               <ul class="list">
                 <li>Trainee&rsquo;s haircut form 50 uah.</li>
                 <li>Haircut under the nozzle from 200 uah.</li>
@@ -106,11 +113,11 @@
               </ul>
             </li>
           </ul>
-          <button class="light-btn button" type="button">Online-booking</button>
+          <button class="services-btn light-btn button" type="button">Online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="section">
+      <section class="benefits section">
         <div class="container">
           <ul class="cards list">
             <li class="card">
@@ -130,9 +137,11 @@
               <p class="card-desc">Gifts for regular customers</p>
             </li>
           </ul>
-          <p class="uppertitle">Old traditional school</p>
-          <h2 class="title">Why people come to us?</h2>
-          <p>Only good things are said about us. But it's better to see and feel 1 time than read 10 times.</p>
+          <div class="benefits-desc">
+            <p class="uppertitle">Old traditional school</p>
+            <h2 class="title">Why people come to us?</h2>
+            <p>Only good things are said about us. But it's better to see and feel 1 time than read 10 times.</p>
+          </div>
         </div>
       </section>
       <!-- Our barbers section -->
@@ -140,9 +149,14 @@
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
-          <ul class="list">
-            <li>
-              <img src="./images/our-barbers/img-1.jpg" alt="Extreme Barber John Smith" width="370" height="346" />
+          <ul class="barber-list list">
+            <li class="barber-card">
+              <img
+                class="barber-img"
+                src="./images/our-barbers/img-1.jpg"
+                alt="Extreme Barber John Smith"
+                width="370"
+                height="346" />
               <h3 class="barber">John Smith</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="list">
@@ -152,8 +166,13 @@
                 <li><a href="" aria-label="LinkedIn"></a></li>
               </ul>
             </li>
-            <li>
-              <img src="./images/our-barbers/img-2.jpg" alt="Extreme Barber Michele Doe" width="370" height="346" />
+            <li class="barber-card">
+              <img
+                class="barber-img"
+                src="./images/our-barbers/img-2.jpg"
+                alt="Extreme Barber Michele Doe"
+                width="370"
+                height="346" />
               <h3 class="barber">Michele Doe</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="list">
@@ -163,8 +182,13 @@
                 <li><a href="" aria-label="LinkedIn"></a></li>
               </ul>
             </li>
-            <li>
-              <img src="./images/our-barbers/img-3.jpg" alt="Extreme Barber Alan Black" width="370" height="346" />
+            <li class="barber-card">
+              <img
+                class="barber-img"
+                src="./images/our-barbers/img-3.jpg"
+                alt="Extreme Barber Alan Black"
+                width="370"
+                height="346" />
               <h3 class="barber">Alan Black</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="list">
@@ -200,23 +224,29 @@
       </section>
       <div class="page-wrapper">
         <!-- Booking section -->
-        <section></section>
+        <section class="booking"></section>
         <!-- Contacts section -->
         <section class="contacts">
-          <h2 class="title">Contacts</h2>
-          <address>
-            <a class="link" href="https://goo.gl/maps/Wx7zS5FiUF3g5TBa7" target="_blank" rel="noopener noreferrer"
-              >st. Vasylkivska, 7A <br />
-              Kiev, 08132</a
-            >
-            <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <a class="link" href="mailto:barbershop@email.com">barbershop@email.com</a>
-          </address>
-          <h3>Working hours</h3>
-          <p>
-            Every day from <time datetime="09:00">9:00</time> to
-            <time datetime="22:00">22:00</time>
-          </p>
+          <div class="contacts-content">
+            <h2 class="title">Contacts</h2>
+            <address class="address">
+              <a
+                class="address-link link"
+                href="https://goo.gl/maps/Wx7zS5FiUF3g5TBa7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >st. Vasylkivska, 7A <br />
+                Kiev, 08132</a
+              >
+              <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
+              <a class="link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+            </address>
+            <h3 class="uppertitle">Working hours</h3>
+            <p>
+              Every day from <time datetime="09:00">9:00</time> to
+              <time datetime="22:00">22:00</time>
+            </p>
+          </div>
         </section>
       </div>
     </main>
@@ -225,12 +255,12 @@
       <div class="container">
         <p class="copyright">&copy; Copyright 2020</p>
         <ul class="list">
-          <li>
+          <li class="footer-list-item">
             <a class="footer-link link" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
               >Instagram</a
             >
           </li>
-          <li>
+          <li class="footer-list-item">
             <a class="footer-link link" href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
           </li>
         </ul>
