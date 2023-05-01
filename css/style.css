@@ -449,8 +449,13 @@ body {
   color: var(--secondary-color);
 }
 
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--accent-color);
+}
+
 .social-icon {
-  fill: var(--secondary-color);
+  fill: currentColor;
 }
 
 /* Gallery */
