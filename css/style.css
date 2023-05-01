@@ -424,10 +424,33 @@ body {
 }
 
 .barber-accent {
+  margin-bottom: 30px;
   color: var(--accent-color);
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
+}
+
+.socials-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  color: var(--secondary-color);
+}
+
+.social-icon {
+  fill: var(--secondary-color);
 }
 
 /* Gallery */
@@ -482,7 +505,7 @@ body {
 }
 
 .contacts .address-link {
-  width: 172px;
+  width: 212px;
   font-weight: 700;
 }
 
@@ -491,6 +514,10 @@ body {
 }
 
 .contacts .link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   color: var(--third-color);
 }
 
