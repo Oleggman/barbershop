@@ -163,13 +163,23 @@ body {
   width: 100%;
 }
 
+.header.no-transparency {
+  background-color: rgba(17, 19, 25, 0.4);
+  backdrop-filter: blur(3px);
+}
+
 .header .container {
   display: flex;
   align-items: center;
 }
 
-.main-logo {
+.main-logo-icon {
   margin-right: 124px;
+  fill: var(--secondary-color);
+}
+
+.header.no-transparency .main-logo-icon {
+  fill: var(--white-color);
 }
 
 .main-nav {
@@ -246,13 +256,10 @@ body {
   line-height: 1.36;
 }
 
-.hero .side-nav {
+.side-nav {
   display: flex;
   align-items: center;
   gap: 40px;
-
-  transform-origin: center left;
-  transform: rotate(-90deg) translateX(40px) translateY(36px);
 }
 
 .side-nav::before {
@@ -261,6 +268,11 @@ body {
   height: 1px;
   width: 60px;
   background-color: var(--secondary-color);
+}
+
+.hero .side-nav {
+  transform-origin: center left;
+  transform: rotate(-90deg) translateX(40px) translateY(36px);
 }
 
 .side-nav .link {
