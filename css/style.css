@@ -171,6 +171,8 @@ body {
   width: 100%;
 
   transition: background-color var(--anim-time);
+
+  z-index: 10;
 }
 
 .header.no-transparency {
@@ -253,10 +255,16 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+
+  -webkit-animation: text-focus-in 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .hero-desc {
   width: 360px;
+
+  -webkit-animation: blink 600ms both;
+  animation: blink 600ms both;
 }
 
 .side-nav .link,
@@ -395,27 +403,68 @@ body {
 
 .benefits .container {
   display: flex;
+  justify-content: center;
+
   gap: 130px;
 }
 
 .cards {
+  position: relative;
   width: 370px;
+  height: 330px;
   color: var(--secondary-color);
 }
 
 .card {
+  position: absolute;
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+
   text-align: center;
+  border-radius: 1px;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: var(--card-bg-color);
 }
 
+.card:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.card:nth-child(2) {
+  top: 35px;
+  right: 0;
+}
+
+.card:nth-child(3) {
+  left: 0;
+  bottom: 35px;
+}
+
+.card:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
 .card-num {
+  position: relative;
+  display: inline-block;
+
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
+
+  margin-bottom: 6px;
 }
 
 .card sup {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 1.38;
@@ -613,6 +662,8 @@ body {
   width: 100vw;
 
   background-color: rgba(17, 19, 25, 0.4);
+
+  transition: visibility 500ms, opacity 500ms;
 }
 
 .backdrop.is-hidden {
@@ -631,6 +682,12 @@ body {
   background-color: var(--white-color);
 
   transform: translate(-50%, -50%);
+
+  transition: transform 500ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 0%);
 }
 
 .modal-close-btn {
@@ -684,5 +741,30 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
   }
 }

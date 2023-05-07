@@ -40,7 +40,7 @@
           </ul>
         </nav>
         <a class="phone-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="light-btn button" type="button">Online-booking</button>
+        <button class="light-btn button" type="button" data-modal-open>Online-booking</button>
       </div>
     </header>
 
@@ -337,9 +337,9 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn">
+        <button class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#close"></use>
           </svg>
@@ -348,7 +348,9 @@
     </div>
   </body>
 
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/animation-on-scroll.js"></script>
   <script src="./js/header.js"></script>
+  <script src="./js/modal.js"></script>
 </html>
