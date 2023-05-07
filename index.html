@@ -18,6 +18,8 @@
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <!-- Animation on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -28,7 +30,7 @@
         <nav class="main-nav">
           <a class="main-logo link" href="/"
             ><svg class="main-logo-icon" width="76" height="76">
-              <use href="./images/icons.svg#icon-barber-logo"></use></svg
+              <use href="./images/icons.svg#barber-logo"></use></svg
           ></a>
           <ul class="nav-list list">
             <li><a class="link" href="#">About</a></li>
@@ -157,7 +159,7 @@
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
           <ul class="barber-list list">
-            <li class="barber-card">
+            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
               <img
                 class="barber-img"
                 src="./images/our-barbers/img-1.jpg"
@@ -190,7 +192,7 @@
                 </li>
               </ul>
             </li>
-            <li class="barber-card">
+            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
               <img
                 class="barber-img"
                 src="./images/our-barbers/img-2.jpg"
@@ -223,7 +225,7 @@
                 </li>
               </ul>
             </li>
-            <li class="barber-card">
+            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="900">
               <img
                 class="barber-img"
                 src="./images/our-barbers/img-3.jpg"
@@ -265,16 +267,16 @@
           <p class="uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="title" hidden>BarberShop gallery</h2>
           <ul class="list">
-            <li>
+            <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
               <img src="./images/works/img-1.jpg" alt="Work 1" width="270" height="360" />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
               <img src="./images/works/img-2.jpg" alt="Work 2" width="270" height="360" />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="900">
               <img src="./images/works/img-3.jpg" alt="Work 3" width="270" height="360" />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200">
               <img src="./images/works/img-4.jpg" alt="Work 4" width="270" height="360" />
             </li>
           </ul>
@@ -334,7 +336,19 @@
         </ul>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-close-btn">
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/animation-on-scroll.js"></script>
   <script src="./js/header.js"></script>
 </html>
