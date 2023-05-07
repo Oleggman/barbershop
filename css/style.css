@@ -136,7 +136,6 @@ body {
   background-color: var(--hover-color);
 }
 
-.header,
 .page-wrapper {
   background-color: var(--main-bg-cl);
 }
@@ -157,6 +156,12 @@ body {
 }
 
 /* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 .header .container {
   display: flex;
@@ -201,6 +206,8 @@ body {
 
 .hero-left-side {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .hero-right-side {
@@ -237,6 +244,23 @@ body {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+}
+
+.hero .side-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  transform-origin: center left;
+  transform: rotate(-90deg) translateX(40px) translateY(36px);
+}
+
+.side-nav::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;
+  background-color: var(--secondary-color);
 }
 
 .side-nav .link {
