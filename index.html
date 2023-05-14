@@ -284,7 +284,26 @@
       </section>
       <div class="page-wrapper" id="contacts">
         <!-- Booking section -->
-        <section class="booking"></section>
+        <section class="booking">
+          <h2 class="title">Online-booking</h2>
+          <form class="booking-form" name="booking_form">
+            <div class="booking-form-wrapper">
+              <label class="booking-form-field">
+                <input class="booking-form-input" type="text" name="name" required minlength="3" placeholder="&nbsp;" />
+                <span class="booking-form-tag">Name*</span>
+              </label>
+              <label class="booking-form-field">
+                <input class="booking-form-input" type="tel" name="phone" required placeholder="&nbsp;" />
+                <span class="booking-form-tag">Phone*</span>
+              </label>
+            </div>
+            <label class="booking-form-field message">
+              <textarea class="booking-form-textarea" name="message" placeholder="&nbsp;"></textarea>
+              <span class="booking-form-tag">Message</span>
+            </label>
+            <button class="booking-submit-btn button" type="submit">SEND</button>
+          </form>
+        </section>
         <!-- Contacts section -->
         <section class="contacts">
           <div class="contacts-content">
