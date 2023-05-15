@@ -286,7 +286,7 @@
         <!-- Booking section -->
         <section class="booking">
           <h2 class="title">Online-booking</h2>
-          <form class="booking-form" name="booking_form">
+          <form class="booking-form" name="booking_form" autocomplete="off">
             <div class="booking-form-wrapper">
               <label class="booking-form-field">
                 <input class="booking-form-input" type="text" name="name" required minlength="3" placeholder="&nbsp;" />
@@ -363,6 +363,48 @@
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
+
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form" name="modal_form" autocomplete="off">
+          <label class="modal-form-field">
+            <input class="modal-form-input" type="text" name="name" required placeholder="&nbsp;" />
+            <span class="modal-form-tag">Name</span>
+            <svg class="modal-form-icon" width="24" height="32">
+              <use href="./images/icons.svg#person"></use>
+            </svg>
+          </label>
+          <label class="modal-form-field">
+            <input class="modal-form-input" type="tel" name="phone" required placeholder="&nbsp;" />
+            <span class="modal-form-tag">Phone</span>
+            <svg class="modal-form-icon" width="24" height="32">
+              <use href="./images/icons.svg#phone"></use>
+            </svg>
+          </label>
+          <label class="modal-form-field">
+            <input class="modal-form-input" type="email" name="email" required placeholder="&nbsp;" />
+            <span class="modal-form-tag">E-mail</span>
+            <svg class="modal-form-icon" width="24" height="32">
+              <use href="./images/icons.svg#email"></use>
+            </svg>
+          </label>
+          <label class="modal-form-field comment">
+            <textarea name="" id="" cols="30" rows="10" class="modal-form-textarea" placeholder="&nbsp;"></textarea>
+            <span class="modal-form-tag">Comment</span>
+          </label>
+
+          <label class="modal-policy-field">
+            <input class="modal-policy-checkbox" type="checkbox" name="policy" />
+            <svg class="modal-policy-icon" width="16" height="16">
+              <use class="unchecked" href="./images/icons.svg#unchecked"></use>
+              <use class="checked" href="./images/icons.svg#checked"></use>
+            </svg>
+            <span class="modal-policy-label"
+              >I accept the terms and conditions of the <a href="" class="policy-link">Privacy Policy</a></span
+            >
+          </label>
+
+          <button class="modal-submit-btn button" type="submit">Send</button>
+        </form>
       </div>
     </div>
   </body>
