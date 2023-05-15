@@ -645,6 +645,10 @@ body {
   transition: border-color var(--anim-time);
 }
 
+.booking-form-input[type="tel"]:hover::placeholder {
+  opacity: 0;
+}
+
 .booking-form-input:focus,
 .booking-form-textarea:focus {
   border-color: var(--white-color);
