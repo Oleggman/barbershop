@@ -632,7 +632,7 @@ body {
   height: 24px;
   padding: 0;
   margin: 0;
-  padding-right: 24px;
+  padding-right: 32px;
   padding-bottom: 4px;
 
   font-size: 14px;
@@ -667,11 +667,33 @@ body {
   margin-bottom: 44px;
 }
 
+.booking-valid-icon {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  fill: var(--main-color);
+
+  transition: fill var(--anim-time), opacity var(--anim-time);
+}
+
+.booking-form-input:not(:placeholder-shown):focus:required:valid ~ .booking-valid-icon {
+  opacity: 1;
+  fill: darkgreen;
+}
+
+.booking-form-input:not(:placeholder-shown):focus:required:invalid ~ .booking-valid-icon {
+  opacity: 1;
+  fill: darkred;
+}
+
 .booking-form-textarea {
   resize: none;
   display: block;
-
   height: 100%;
+  padding: 0;
 }
 
 .booking-submit-btn {

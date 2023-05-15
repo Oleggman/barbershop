@@ -289,12 +289,32 @@
           <form class="booking-form" name="booking_form" autocomplete="off">
             <div class="booking-form-wrapper">
               <label class="booking-form-field">
-                <input class="booking-form-input" type="text" name="name" required minlength="3" placeholder="&nbsp;" />
+                <input
+                  class="booking-form-input"
+                  type="text"
+                  name="name"
+                  required
+                  minlength="3"
+                  maxlength="12"
+                  placeholder="&nbsp;" />
                 <span class="booking-form-tag">Name*</span>
+                <svg class="booking-valid-icon" width="24" height="24">
+                  <use href="./images/icons.svg#booking-valid-icon"></use>
+                </svg>
               </label>
               <label class="booking-form-field">
-                <input class="booking-form-input" type="tel" name="phone" required placeholder="&nbsp;" />
+                <input
+                  class="booking-form-input"
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="&nbsp;"
+                  minlength="12"
+                  maxlength="12" />
                 <span class="booking-form-tag">Phone*</span>
+                <svg class="booking-valid-icon" width="24" height="24">
+                  <use href="./images/icons.svg#booking-valid-icon"></use>
+                </svg>
               </label>
             </div>
             <label class="booking-form-field message">
@@ -367,14 +387,28 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form" name="modal_form" autocomplete="off">
           <label class="modal-form-field">
-            <input class="modal-form-input" type="text" name="name" required placeholder="&nbsp;" />
+            <input
+              class="modal-form-input"
+              type="text"
+              name="name"
+              minlength="3"
+              maxlength="12"
+              required
+              placeholder="&nbsp;" />
             <span class="modal-form-tag">Name</span>
             <svg class="modal-form-icon" width="24" height="32">
               <use href="./images/icons.svg#person"></use>
             </svg>
           </label>
           <label class="modal-form-field">
-            <input class="modal-form-input" type="tel" name="phone" required placeholder="&nbsp;" />
+            <input
+              class="modal-form-input"
+              type="tel"
+              name="phone"
+              minlength="12"
+              maxlength="12"
+              required
+              placeholder="&nbsp;" />
             <span class="modal-form-tag">Phone</span>
             <svg class="modal-form-icon" width="24" height="32">
               <use href="./images/icons.svg#phone"></use>
