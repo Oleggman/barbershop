@@ -28,7 +28,7 @@
     <header class="header" data-header>
       <div class="container">
         <nav class="main-nav">
-          <a class="main-logo link" href="/"
+          <a class="main-logo link" href="#hero"
             ><svg class="main-logo-icon" width="76" height="76">
               <use href="./images/icons.svg#barber-logo"></use></svg
           ></a>
@@ -40,13 +40,19 @@
           </ul>
         </nav>
         <a class="phone-link link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="light-btn button" type="button" data-modal-open>Online-booking</button>
+        <button class="light-btn button open-modal" type="button" data-modal-open>Online-booking</button>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="burger-menu-icon" width="24" height="16">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <section id="hero" class="hero">
         <div class="container">
           <div class="hero-left-side">
             <ul class="side-nav list">
@@ -78,10 +84,26 @@
         <div class="container">
           <ul class="about-list list">
             <li>
-              <img src="./images/about/img-1.jpg" alt="Mustache trim" width="270" height="445" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-desk.jpg 1x, ./images/about/about-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-tab.jpg 1x, ./images/about/about-tab@2x.jpg 2x" />
+                <img src="./images/about/about-tab.jpg" alt="Mustache trim" loading="lazy" />
+              </picture>
             </li>
             <li>
-              <img src="./images/about/img-2.jpg" alt="Hair trim" width="270" height="445" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-2-desk.jpg 1x, ./images/about/about-2-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-2-tab.jpg 1x, ./images/about/about-2-tab@2x.jpg 2x" />
+                <img src="./images/about/about-2-tab.jpg" alt="Mustache trim" loading="lazy" />
+              </picture>
             </li>
           </ul>
           <div class="about-desc">
@@ -93,7 +115,7 @@
               into the hands of our master, you will never be the same again. We are a team that is always "on the same
               wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
             </p>
-            <button class="button" type="button">Online-booking</button>
+            <button class="button open-modal" type="button" data-modal-open>Online-booking</button>
           </div>
         </div>
       </section>
@@ -122,7 +144,7 @@
               </ul>
             </li>
           </ul>
-          <button class="services-btn light-btn button" type="button">Online-booking</button>
+          <button class="services-btn light-btn button open-modal" type="button" data-modal-open>Online-booking</button>
         </div>
       </section>
       <!-- Benefits section -->
@@ -159,13 +181,19 @@
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
           <ul class="barber-list list">
-            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
-              <img
-                class="barber-img"
-                src="./images/our-barbers/img-1.jpg"
-                alt="Extreme Barber John Smith"
-                width="370"
-                height="346" />
+            <li class="barber-card" data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/our-barbers/barber-1-desk.jpg 1x, ./images/our-barbers/barber-1-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/our-barbers/barber-1-tab.jpg 1x, ./images/our-barbers/barber-1-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/our-barbers/barber-1-mob.jpg 1x, ./images/our-barbers/barber-1-mob@2x.jpg 2x" />
+                <img src="./images/our-barbers/barber-1-mob.jpg" alt="Extreme Barber John Smith" loading="lazy" />
+              </picture>
               <h3 class="barber">John Smith</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="socials-list list">
@@ -192,13 +220,19 @@
                 </li>
               </ul>
             </li>
-            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="600">
-              <img
-                class="barber-img"
-                src="./images/our-barbers/img-2.jpg"
-                alt="Extreme Barber Michele Doe"
-                width="370"
-                height="346" />
+            <li class="barber-card" data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/our-barbers/barber-2-desk.jpg 1x, ./images/our-barbers/barber-2-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/our-barbers/barber-2-tab.jpg 1x, ./images/our-barbers/barber-2-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/our-barbers/barber-2-mob.jpg 1x, ./images/our-barbers/barber-2-mob@2x.jpg 2x" />
+                <img src="./images/our-barbers/barber-2-mob.jpg" alt="Extreme Barber Michele Doe" loading="lazy" />
+              </picture>
               <h3 class="barber">Michele Doe</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="socials-list list">
@@ -225,13 +259,19 @@
                 </li>
               </ul>
             </li>
-            <li class="barber-card" data-aos="fade-left" data-aos-duration="600" data-aos-delay="900">
-              <img
-                class="barber-img"
-                src="./images/our-barbers/img-3.jpg"
-                alt="Extreme Barber Alan Black"
-                width="370"
-                height="346" />
+            <li class="barber-card" data-aos="fade-right" data-aos-duration="600" data-aos-delay="900">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/our-barbers/barber-3-desk.jpg 1x, ./images/our-barbers/barber-3-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/our-barbers/barber-3-tab.jpg 1x, ./images/our-barbers/barber-3-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/our-barbers/barber-3-mob.jpg 1x, ./images/our-barbers/barber-3-mob@2x.jpg 2x" />
+                <img src="./images/our-barbers/barber-3-mob.jpg" alt="Extreme Barber Alan Black" loading="lazy" />
+              </picture>
               <h3 class="barber">Alan Black</h3>
               <p class="barber-accent">Extreme Barber</p>
               <ul class="socials-list list">
@@ -268,16 +308,60 @@
           <h2 class="title" hidden>BarberShop gallery</h2>
           <ul class="list">
             <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="300">
-              <img src="./images/works/img-1.jpg" alt="Work 1" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/works/gallery-1-desk.jpg 1x, ./images/works/gallery-1-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/works/gallery-1-tab@1x.jpg 1x, ./images/works/gallery-1-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/works/gallery-1-mob@1x.jpg 1x, ./images/works/gallery-1-mob@2x.jpg 2x" />
+                <img src="./images/works/gallery-1-mob@1x.jpg" alt="Work 1" loading="lazy" />
+              </picture>
             </li>
             <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="600">
-              <img src="./images/works/img-2.jpg" alt="Work 2" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/works/gallery-2-desk.jpg 1x, ./images/works/gallery-2-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/works/gallery-2-tab@1x.jpg 1x, ./images/works/gallery-2-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/works/gallery-2-mob@1x.jpg 1x, ./images/works/gallery-2-mob@2x.jpg 2x" />
+                <img src="./images/works/gallery-2-mob@1x.jpg" alt="Work 2" loading="lazy" />
+              </picture>
             </li>
             <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="900">
-              <img src="./images/works/img-3.jpg" alt="Work 3" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/works/gallery-3-desk.jpg 1x, ./images/works/gallery-3-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/works/gallery-3-tab@1x.jpg 1x, ./images/works/gallery-3-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/works/gallery-3-mob@1x.jpg 1x, ./images/works/gallery-3-mob@2x.jpg 2x" />
+                <img src="./images/works/gallery-3-mob@1x.jpg" alt="Work 3" loading="lazy" />
+              </picture>
             </li>
             <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200">
-              <img src="./images/works/img-4.jpg" alt="Work 4" width="270" height="360" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/works/gallery-4-desk.jpg 1x, ./images/works/gallery-4-desk@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/works/gallery-4-tab@1x.jpg 1x, ./images/works/gallery-4-tab@2x.jpg 2x" />
+                <source
+                  media="(min-width: 418px)"
+                  srcset="./images/works/gallery-4-mob@1x.jpg 1x, ./images/works/gallery-4-mob@2x.jpg 2x" />
+                <img src="./images/works/gallery-4-mob@1x.jpg" alt="Work 4" loading="lazy" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -328,33 +412,37 @@
         <section class="contacts">
           <div class="contacts-content">
             <h2 class="title">Contacts</h2>
-            <address class="address">
-              <a
-                class="address-link link"
-                href="https://goo.gl/maps/Wx7zS5FiUF3g5TBa7"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><svg class="address-icon" width="24" height="24">
-                  <use href="./images/icons.svg#map-pin"></use></svg
-                >st. Vasylkivska, 7A <br />
-                Kiev, 08132</a
-              >
-              <a class="link" href="tel:+380441111111">
-                <svg class="address-icon" width="24" height="24">
-                  <use href="./images/icons.svg#phone"></use></svg
-                >+38 044 111 11 11</a
-              >
-              <a class="link" href="mailto:barbershop@email.com"
-                ><svg class="address-icon" width="24" height="24">
-                  <use href="./images/icons.svg#mail"></use></svg
-                >barbershop@email.com</a
-              >
-            </address>
-            <h3 class="uppertitle-light uppertitle">Working hours</h3>
-            <p>
-              Every day from <time datetime="09:00">9:00</time> to
-              <time datetime="22:00">22:00</time>
-            </p>
+            <div class="contacts-info">
+              <address class="address">
+                <a
+                  class="address-link link"
+                  href="https://goo.gl/maps/Wx7zS5FiUF3g5TBa7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><svg class="address-icon" width="24" height="24">
+                    <use href="./images/icons.svg#map-pin"></use></svg
+                  >st. Vasylkivska, 7A <br />
+                  Kiev, 08132</a
+                >
+                <a class="link" href="tel:+380441111111">
+                  <svg class="address-icon" width="24" height="24">
+                    <use href="./images/icons.svg#phone"></use></svg
+                  >+38 044 111 11 11</a
+                >
+                <a class="link" href="mailto:barbershop@email.com"
+                  ><svg class="address-icon" width="24" height="24">
+                    <use href="./images/icons.svg#mail"></use></svg
+                  >barbershop@email.com</a
+                >
+              </address>
+              <div class="contacts-work-hours">
+                <h3 class="uppertitle-light uppertitle">Working hours</h3>
+                <p>
+                  Every day from <time datetime="09:00">9:00</time> to
+                  <time datetime="22:00">22:00</time>
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -376,7 +464,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" id="modal" data-modal>
       <div class="modal">
         <button class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="8" height="8">
@@ -441,6 +529,45 @@
         </form>
       </div>
     </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu modal-close-btn">
+        <svg class="modal-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item"><a href="#about" class="link">About</a></li>
+        <li class="mobile-menu-item"><a href="#services" class="link">Services and prices</a></li>
+        <li class="mobile-menu-item"><a href="#barbers" class="link">Barbers</a></li>
+        <li class="mobile-menu-item"><a href="#contacts" class="link">Contacts</a></li>
+      </ul>
+
+      <div class="mobile-menu-address">
+        <ul class="list">
+          <li class="mobile-menu-item">
+            <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
+          </li>
+          <li class="mobile-menu-item">
+            <button class="button open-modal" type="button">Online-booking</button>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="side-nav list">
+        <li>
+          <a class="menu-side-link link" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a class="menu-side-link link" href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </li>
+      </ul>
+    </div>
   </body>
 
   <!-- Mask for input -->
@@ -452,4 +579,5 @@
   <script src="./js/header.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/inputmask.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </html>
