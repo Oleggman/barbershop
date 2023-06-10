@@ -1,1 +1,1 @@
-# barbershop
+# GoIT "Barbershop" website project
